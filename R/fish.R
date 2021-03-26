@@ -467,7 +467,10 @@ fish <- R6::R6Class(
 
     # @description Kill engine when object is collected
     finalize = function() {
-      self$run("quit")
+      tryCatch(
+        self$run("quit"),
+        error = function(err) { }
+      )
     }
   )
 )
@@ -493,4 +496,11 @@ fish_find <- function() {
   file <- gsub("//", "/", file)
 
   return(file)
+}
+
+# Work around R CMD check issue:
+# Namespaces in Imports field not imported from
+workaround <- function() {
+  processx::process
+  R6::R6Class
 }

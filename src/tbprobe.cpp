@@ -225,7 +225,9 @@ public:
 
         *mapping = statbuf.st_size;
         *baseAddress = mmap(nullptr, statbuf.st_size, PROT_READ, MAP_SHARED, fd, 0);
+ #ifndef __sun
         madvise(*baseAddress, statbuf.st_size, MADV_RANDOM);
+ #endif
         ::close(fd);
 
         if (*baseAddress == MAP_FAILED)
@@ -1191,7 +1193,7 @@ WDLScore search(Position& pos, ProbeState* result) {
     auto moveList = MoveList<LEGAL>(pos);
     size_t totalCount = moveList.size(), moveCount = 0;
 
-    for (const Move& move : moveList)
+    for (const ExtMove& move : moveList)
     {
         if (   !pos.capture(move)
             && (!CheckZeroingMoves || type_of(pos.moved_piece(move)) != PAWN))
@@ -1460,7 +1462,7 @@ int Tablebases::probe_dtz(Position& pos, ProbeState* result) {
     StateInfo st;
     int minDTZ = 0xFFFF;
 
-    for (const Move& move : MoveList<LEGAL>(pos))
+    for (const ExtMove& move : MoveList<LEGAL>(pos))
     {
         bool zeroing = pos.capture(move) || type_of(pos.moved_piece(move)) == PAWN;
 

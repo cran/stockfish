@@ -1,17 +1,17 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# stockfish <a href='https://www.curso-r.com/'><img src='man/figures/logo.png' align="right" height="139" /></a>
+# stockfish <a href='https://curso-r.com/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/stockfish)](https://CRAN.R-project.org/package=stockfish)
 [![Codecov test
 coverage](https://codecov.io/gh/curso-r/stockfish/branch/master/graph/badge.svg)](https://codecov.io/gh/curso-r/stockfish?branch=master)
 [![R-CMD-check](https://github.com/curso-r/stockfish/workflows/R-CMD-check/badge.svg)](https://github.com/curso-r/stockfish/actions)
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
 
 ## Overview
@@ -24,8 +24,14 @@ open source, powerful chess engine written in C++.
 
 ## Installation
 
-You can install the development version of `{stockfish}` from
-[GitHub](https://github.com/curso-r/stockfish) with:
+Install the released version of `{stockfish}` from CRAN:
+
+``` r
+install.packages("stockfish")
+```
+
+Or install the development version from
+[GitHub](https://github.com/curso-r/stockfish):
 
 ``` r
 # install.packages("remotes")
@@ -50,11 +56,11 @@ engine <- fish$new()
 
 # Examine background process
 engine$process
-#> PROCESS 'stockfish', running, pid 179680.
+#> PROCESS 'stockfish', running, pid 151512.
 
 # Search for best move
 engine$go()
-#> [1] "bestmove d2d4 ponder d7d5"
+#> [1] "bestmove c2c3 ponder b8c6"
 
 # Setup a game from FEN
 engine$ucinewgame()
