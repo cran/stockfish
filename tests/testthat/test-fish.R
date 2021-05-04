@@ -7,16 +7,16 @@ test_that("engine works", {
   engine <- fish$new()
   expect_true(engine$process$is_alive())
   expect_gt(engine$process$get_pid(), 0)
-  expect_true(grepl("Stockfish 11", engine$output))
 
-  # Test commands
+  # Test startup message
   expect_true(engine$isready())
+
+  # Test command
   expect_equal(utils::tail(engine$uci(), 1), "uciok")
 
   # Stop engine
   engine$quit()
-  # It might take a sec to quit
-  engine$process$wait(3000)
+  engine$process$wait(3000) # It might take a sec to quit
   expect_false(engine$process$is_alive())
   expect_error(engine$process$get_status())
 
@@ -25,8 +25,7 @@ test_that("engine works", {
 
   # Test more commands
   expect_output(print(engine), "PROCESS")
-  tmp <- engine$position("e2e4", "startpos")
-  expect_true(is.null(tmp) || grepl("Stockfish 11", tmp))
+  engine$position("e2e4", "startpos")
   expect_equal(engine$ucinewgame(), "readyok")
   expect_null(engine$setoption("Clear Hash"))
   expect_length(engine$go(depth = 10, movetime = 1000), 1)

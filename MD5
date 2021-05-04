@@ -1,8 +1,8 @@
-32f063f64eb92ca06e9c97f9e35b1717 *DESCRIPTION
+266bfadbeafe9be4c27585ae1c0bc2a2 *DESCRIPTION
 25bce091fe137c257bd30ee1f4b99e7d *NAMESPACE
-031c24a6ccda0fee0a99736f7ec8bf95 *NEWS.md
+310c6a675c40496f7f5564070d559a23 *NEWS.md
 cfdedc48fa1a9779d6afbe8f824611d5 *R/fish.R
-bbf1f8af08057df9599f2441ff8ab68c *README.md
+d4abe9fa7c80b742048fcbf124458377 *README.md
 9368a6267bb54cc6f0b56ce7b00e8493 *cleanup
 bfcb6cab58724fdd72363513c474ff03 *cleanup.win
 e890112877abbbe5071b3bd3fb711d7a *configure
@@ -50,7 +50,7 @@ a1af1892266495c925d799742430243c *src/types.h
 229931ac46c690b630f7b4d7e060a614 *src/uci.cpp
 017176566b76b7c7d350c21d80f82eb0 *src/uci.h
 0894e876ad422e9ed0ad8b97b92295da *src/ucioption.cpp
-3888ae8466ae8c064ac17848ddddfbba *tests/testthat.R
-a839c1921f51242084e7ab0664386e25 *tests/testthat/test-fish.R
+1828eae83ba8271c17deee13efc8c772 *tests/testthat.R
+12ad80b56482e1de80b2739a6456d7c2 *tests/testthat/test-fish.R
 3524f8454ba05f9de0eb1d1240251eb4 *tools/config.R
-ab9bc211b3ee2c85d631a4d9410ccff6 *tools/config/configure.R
+a83e316ec808a672ef6b3bf8605f6905 *tools/config/configure.R

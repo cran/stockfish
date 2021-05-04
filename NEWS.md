@@ -1,3 +1,9 @@
+# stockfish 0.1.2
+
+* Proper copyright notices.
+* No need for 'LazyData' anymore.
+* Adapted tests for Solaris and M1 Mac.
+
 # stockfish 0.1.1
 
 * Updated compilation on Solaris.
