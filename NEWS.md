@@ -1,3 +1,8 @@
+# stockfish 0.1.3
+
+* Generalized tests on M1 Mac.
+* Updated code for full Solaris compilation.
+
 # stockfish 0.1.2
 
 * Proper copyright notices.
