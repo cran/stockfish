@@ -1,3 +1,9 @@
+# stockfish 1.0.0
+
+* Update documentation to reflect Stockfish 14.1.
+* Bundle Stockfish 14.1.
+* New system requirement: C++17.
+
 # stockfish 0.1.3
 
 * Generalized tests on M1 Mac.
